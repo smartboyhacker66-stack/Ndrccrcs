@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvMeetingId"
+                style="@style/TandemText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:textColor="@color/accent"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                style="@style/TandemText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:text="@string/status_setting_up" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCopyId"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_copy_id" />
+
+                <Button
+                    android:id="@+id/btnRepeatId"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_repeat_id" />
+            </LinearLayout>
+
+            <org.webrtc.SurfaceViewRenderer
+                android:id="@+id/remoteView"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/remote_view_desc"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnBack"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_back" />
+
+                <Button
+                    android:id="@+id/btnHome"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_home" />
+
+                <Button
+                    android:id="@+id/btnRecents"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_recents" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSwipeUp"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_swipe_up" />
+
+                <Button
+                    android:id="@+id/btnSwipeDown"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_swipe_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSwipeLeft"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_swipe_left" />
+
+                <Button
+                    android:id="@+id/btnSwipeRight"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_swipe_right" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPointer"
+                style="@style/TandemText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:accessibilityLiveRegion="polite"
+                android:focusable="true"
+                android:text="Pointer: 50 percent across, 50 percent down" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnPtrUp"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_ptr_up" />
+
+                <Button
+                    android:id="@+id/btnPtrDown"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_ptr_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnPtrLeft"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_ptr_left" />
+
+                <Button
+                    android:id="@+id/btnPtrRight"
+                    style="@style/TandemButton"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_ptr_right" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnTapPointer"
+                style="@style/TandemButton"
+                android:text="@string/btn_tap_pointer" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnDisconnect"
+        style="@style/TandemButton.Danger"
+        android:layout_margin="16dp"
+        android:text="@string/btn_disconnect" />
+</LinearLayout>

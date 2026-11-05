@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header_bg"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TandemText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/accent"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/TandemText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/dev_by" />
+
+        <TextView
+            style="@style/TandemText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/copyright"
+            android:textSize="14sp" />
+
+        <TextView
+            style="@style/TandemText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lead_dev"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                style="@style/TandemText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:text="@string/status_setting_up"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnConnectAnother"
+                style="@style/TandemButton"
+                android:text="@string/btn_connect_another" />
+
+            <LinearLayout
+                android:id="@+id/panelController"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvControllerIntro"
+                    style="@style/TandemText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:focusable="true"
+                    android:text="@string/controller_intro" />
+
+                <Button
+                    android:id="@+id/btnGenerate"
+                    style="@style/TandemButton"
+                    android:text="@string/btn_generate" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAllowAccess"
+                style="@style/TandemButton"
+                android:layout_marginTop="24dp"
+                android:text="@string/btn_allow_access" />
+
+            <LinearLayout
+                android:id="@+id/panelSharer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvConsent"
+                    style="@style/TandemText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:focusable="true"
+                    android:text="@string/sharer_consent" />
+
+                <EditText
+                    android:id="@+id/etMeetingId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/hint_meeting_id"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters|textNoSuggestions"
+                    android:maxLength="8"
+                    android:minHeight="56dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_secondary"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnConnect"
+                    style="@style/TandemButton"
+                    android:text="@string/btn_connect" />
+
+                <Button
+                    android:id="@+id/btnAccessibility"
+                    style="@style/TandemButton"
+                    android:text="@string/btn_open_accessibility" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnDisconnect"
+        style="@style/TandemButton.Danger"
+        android:layout_margin="16dp"
+        android:text="@string/btn_disconnect" />
+</LinearLayout>

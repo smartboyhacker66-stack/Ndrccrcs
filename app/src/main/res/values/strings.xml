@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BITS Tandem Centre</string>
+    <string name="dev_by">Developed by Blind Indian Tech Support</string>
+    <string name="copyright">All Rights Reserved © 2026 Blind Indian Tech Support Team</string>
+    <string name="lead_dev">Lead Developer: Aman</string>
+
+    <string name="status_setting_up">Setting up, please wait...</string>
+    <string name="status_ready">Setup is ready</string>
+
+    <string name="btn_connect_another">Connect Another Device</string>
+    <string name="btn_allow_access">Allow access to my phone</string>
+    <string name="btn_generate">Generate Meeting ID from Blind Indian Tech Support Meeting Centre</string>
+    <string name="btn_connect">Connect</string>
+    <string name="btn_open_accessibility">Open Accessibility settings to enable BITS Tandem Centre</string>
+    <string name="btn_disconnect">Disconnect Connection</string>
+
+    <string name="controller_intro">Generate a Meeting ID and give it to the person you want to help. They enter it under Allow access to my phone. You will then see their screen and can control it.</string>
+    <string name="sharer_consent">The other person will see your screen and can tap, swipe, and press Back, Home and Recents on your phone. Only share the Meeting ID with someone you trust. You can press Disconnect Connection at any time.</string>
+    <string name="hint_meeting_id">Meeting ID: 7 digits and 1 capital letter</string>
+
+    <string name="controller_title">Remote control</string>
+    <string name="meeting_id_label">Meeting ID</string>
+    <string name="btn_copy_id">Copy ID</string>
+    <string name="btn_repeat_id">Repeat ID</string>
+    <string name="remote_view_desc">Remote screen. Touch to tap, drag to swipe.</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_home">Home</string>
+    <string name="btn_recents">Recents</string>
+    <string name="btn_swipe_up">Swipe up</string>
+    <string name="btn_swipe_down">Swipe down</string>
+    <string name="btn_swipe_left">Swipe left</string>
+    <string name="btn_swipe_right">Swipe right</string>
+    <string name="btn_ptr_up">Pointer up</string>
+    <string name="btn_ptr_down">Pointer down</string>
+    <string name="btn_ptr_left">Pointer left</string>
+    <string name="btn_ptr_right">Pointer right</string>
+    <string name="btn_tap_pointer">Tap at pointer</string>
+
+    <string name="service_description">Lets the person you connected with tap, swipe, and press Back, Home and Recents on this phone during a BITS Tandem Centre session. It does not read your screen content.</string>
+    <string name="notif_channel">Remote session</string>
+    <string name="notif_title">BITS Tandem Centre session active</string>
+    <string name="notif_text">Your screen is being shared. Tap Disconnect to stop.</string>
+    <string name="notif_disconnect">Disconnect</string>
+</resources>

@@ -1,0 +1,10 @@
+node_modules/
+build/
+.gradle/
+local.properties
+.idea/
+*.iml
+captures/
+dist/
+.build_result.txt
+.render_blueprint_opened

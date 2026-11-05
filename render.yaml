@@ -1,0 +1,14 @@
+# Render Blueprint for the BITS Tandem Centre signaling server (free tier).
+services:
+  - type: web
+    name: bits-tandem-centre
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20
