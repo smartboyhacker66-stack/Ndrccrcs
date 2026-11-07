@@ -22,16 +22,15 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          accept-android-sdk-licenses: true
-
+      # The GitHub runner already ships an Android SDK (with sdkmanager), so no
+      # setup action is used: its default "tools" package no longer exists and
+      # made the build fail with "Failed to find package 'tools'".
       - name: Accept licenses, install SDK packages, point Gradle at the SDK
         shell: bash
         run: |
           set +o pipefail
           SDK_DIR="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
+          if [ ! -d "$SDK_DIR" ]; then SDK_DIR=/usr/local/lib/android/sdk; fi
           echo "Android SDK directory: $SDK_DIR"
           mkdir -p "$SDK_DIR/licenses"
 
@@ -42,8 +41,9 @@ jobs:
           # 2) Accept everything else through sdkmanager.
           SDKMANAGER="$(command -v sdkmanager || true)"
           if [ -z "$SDKMANAGER" ]; then
-            SDKMANAGER="$SDK_DIR/cmdline-tools/latest/bin/sdkmanager"
+            SDKMANAGER="$(ls -d "$SDK_DIR"/cmdline-tools/*/bin/sdkmanager 2>/dev/null | sort -V | tail -1)"
           fi
+          echo "sdkmanager: $SDKMANAGER"
           yes | "$SDKMANAGER" --sdk_root="$SDK_DIR" --licenses > /dev/null || true
           "$SDKMANAGER" --sdk_root="$SDK_DIR" "platform-tools" "platforms;android-34" "build-tools;34.0.0"
 
