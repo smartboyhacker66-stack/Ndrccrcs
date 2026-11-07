@@ -12,7 +12,9 @@ An accessible Android remote-assistance app. A helper generates a Meeting ID; th
 | `render.yaml` | Render Blueprint: `npm install` / `node server.js`, free plan, `/health` check |
 | `app/` | Android app (Java, WebRTC, AccessibilityService, MediaProjection) |
 | `.github/workflows/build-apk.yml` | Builds the APK on every push to `main`; uploads it as an artifact and a GitHub Release |
-| `push_to_github.bat` | Windows script: init, commit, push, Render trigger, waits for server and APK |
+| `push_to_github.bat` | Windows one-click script (needs `git` and a logged-in `gh`): Step 1 push, Step 2 build and auto-download APK to `dist\`, Step 3 server check. On a failed build it saves the exact error to `build-error-log.txt` |
+| `scripts/finish.ps1` | Speaks and prints the final message |
+| `.gitattributes` | Fixed line endings so Git prints no CRLF warnings |
 
 ## How it works
 

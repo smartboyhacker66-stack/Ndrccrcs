@@ -8,3 +8,5 @@ captures/
 dist/
 .build_result.txt
 .render_blueprint_opened
+build-error-log.txt
+*.apk
